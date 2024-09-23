@@ -1,0 +1,54 @@
+MPLINK 4.49, Linker
+Linker Map File - Created Sun Sep 22 20:41:50 2024
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000000
+                   .org_1       code   0x000000    program   0x00010e
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000086      
+            135 out of 1094 program addresses used, program memory utilization is 12%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                ACTIVARLF   0x00000d    program     static C:\Users\100094631\OneDrive\Escritorio\MPLab 1\SUCESION.asm
+               IZQUIERDA1   0x00001a    program     static C:\Users\100094631\OneDrive\Escritorio\MPLab 1\SUCESION.asm
+               IZQUIERDA2   0x000027    program     static C:\Users\100094631\OneDrive\Escritorio\MPLab 1\SUCESION.asm
+               IZQUIERDA3   0x000032    program     static C:\Users\100094631\OneDrive\Escritorio\MPLab 1\SUCESION.asm
+               IZQUIERDA4   0x00003d    program     static C:\Users\100094631\OneDrive\Escritorio\MPLab 1\SUCESION.asm
+               IZQUIERDA5   0x000048    program     static C:\Users\100094631\OneDrive\Escritorio\MPLab 1\SUCESION.asm
+               IZQUIERDA6   0x000055    program     static C:\Users\100094631\OneDrive\Escritorio\MPLab 1\SUCESION.asm
+               IZQUIERDA7   0x000060    program     static C:\Users\100094631\OneDrive\Escritorio\MPLab 1\SUCESION.asm
+               IZQUIERDA8   0x00006d    program     static C:\Users\100094631\OneDrive\Escritorio\MPLab 1\SUCESION.asm
+               IZQUIERDA9   0x00007a    program     static C:\Users\100094631\OneDrive\Escritorio\MPLab 1\SUCESION.asm
+                   PROBAR   0x00000a    program     static C:\Users\100094631\OneDrive\Escritorio\MPLab 1\SUCESION.asm
+                 REGRESAR   0x00000c    program     static C:\Users\100094631\OneDrive\Escritorio\MPLab 1\SUCESION.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                   PROBAR   0x00000a    program     static C:\Users\100094631\OneDrive\Escritorio\MPLab 1\SUCESION.asm
+                 REGRESAR   0x00000c    program     static C:\Users\100094631\OneDrive\Escritorio\MPLab 1\SUCESION.asm
+                ACTIVARLF   0x00000d    program     static C:\Users\100094631\OneDrive\Escritorio\MPLab 1\SUCESION.asm
+               IZQUIERDA1   0x00001a    program     static C:\Users\100094631\OneDrive\Escritorio\MPLab 1\SUCESION.asm
+               IZQUIERDA2   0x000027    program     static C:\Users\100094631\OneDrive\Escritorio\MPLab 1\SUCESION.asm
+               IZQUIERDA3   0x000032    program     static C:\Users\100094631\OneDrive\Escritorio\MPLab 1\SUCESION.asm
+               IZQUIERDA4   0x00003d    program     static C:\Users\100094631\OneDrive\Escritorio\MPLab 1\SUCESION.asm
+               IZQUIERDA5   0x000048    program     static C:\Users\100094631\OneDrive\Escritorio\MPLab 1\SUCESION.asm
+               IZQUIERDA6   0x000055    program     static C:\Users\100094631\OneDrive\Escritorio\MPLab 1\SUCESION.asm
+               IZQUIERDA7   0x000060    program     static C:\Users\100094631\OneDrive\Escritorio\MPLab 1\SUCESION.asm
+               IZQUIERDA8   0x00006d    program     static C:\Users\100094631\OneDrive\Escritorio\MPLab 1\SUCESION.asm
+               IZQUIERDA9   0x00007a    program     static C:\Users\100094631\OneDrive\Escritorio\MPLab 1\SUCESION.asm
+
+

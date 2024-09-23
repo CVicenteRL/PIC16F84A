@@ -1,0 +1,491 @@
+MPASM  5.51                      SUCESION.ASM   9-22-2024  20:41:48         PAGE  1
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+Warning[205]: Found directive in column 1. (INCLUDE)
+                      00001 INCLUDE <P16F84A.INC>
+                      00001         LIST
+                      00002 
+                      00003 ;==========================================================================
+                      00004 ;  MPASM PIC16F84A processor include
+                      00005 ; 
+                      00006 ;  (c) Copyright 1999-2013 Microchip Technology, All rights reserved
+                      00007 ;==========================================================================
+                      00008 
+                      00208         LIST
+Warning[205]: Found directive in column 1. (LIST)
+                      00002 LIST P=16F84A
+Warning[205]: Found directive in column 1. (ORG)
+0000                  00003 ORG 0
+Warning[203]: Found opcode in column 1. (BSF)
+0000   1683           00004 BSF STATUS, RP0
+Warning[203]: Found opcode in column 1. (CLRF)
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+0001   0186           00005 CLRF TRISB
+Warning[203]: Found opcode in column 1. (BSF)
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+0002   1505           00006 BSF TRISA, 2
+Warning[203]: Found opcode in column 1. (BSF)
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+0003   1585           00007 BSF TRISA, 3
+Warning[203]: Found opcode in column 1. (BCF)
+0004   1283           00008 BCF STATUS, RP0
+                      00009 
+Warning[203]: Found opcode in column 1. (CLRF)
+0005   0185           00010 CLRF PORTA
+Warning[203]: Found opcode in column 1. (CLRF)
+0006   0186           00011 CLRF PORTB
+Warning[203]: Found opcode in column 1. (MOVLW)
+0007   300F           00012 MOVLW B'00001111'
+Warning[203]: Found opcode in column 1. (MOVWF)
+0008   0086           00013 MOVWF PORTB
+Warning[203]: Found opcode in column 1. (RLF)
+0009   0D06           00014 RLF PORTB, 0
+                      00015 
+000A                  00016 PROBAR
+Warning[203]: Found opcode in column 1. (BTFSC)
+000A   1905           00017 BTFSC PORTA, 2
+Warning[203]: Found opcode in column 1. (CALL)
+000B   200D           00018 CALL ACTIVARLF
+000C                  00019 REGRESAR
+Warning[203]: Found opcode in column 1. (GOTO)
+000C   280A           00020 GOTO PROBAR
+                      00021 
+000D                  00022 ACTIVARLF
+Warning[203]: Found opcode in column 1. (BTFSC)
+000D   1905           00023 BTFSC PORTA, 2
+Warning[203]: Found opcode in column 1. (GOTO)
+MPASM  5.51                      SUCESION.ASM   9-22-2024  20:41:48         PAGE  2
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+000E   280D           00024 GOTO ACTIVARLF
+Warning[203]: Found opcode in column 1. (CALL)
+000F   201A           00025 CALL IZQUIERDA1
+Warning[203]: Found opcode in column 1. (CALL)
+0010   207A           00026 CALL IZQUIERDA9
+Warning[203]: Found opcode in column 1. (CALL)
+0011   206D           00027 CALL IZQUIERDA8
+Warning[203]: Found opcode in column 1. (CALL)
+0012   2060           00028 CALL IZQUIERDA7
+Warning[203]: Found opcode in column 1. (CALL)
+0013   2055           00029 CALL IZQUIERDA6
+Warning[203]: Found opcode in column 1. (CALL)
+0014   2048           00030 CALL IZQUIERDA5
+Warning[203]: Found opcode in column 1. (CALL)
+0015   203D           00031 CALL IZQUIERDA4
+Warning[203]: Found opcode in column 1. (CALL)
+0016   2032           00032 CALL IZQUIERDA3
+Warning[203]: Found opcode in column 1. (CALL)
+0017   2027           00033 CALL IZQUIERDA2
+Warning[203]: Found opcode in column 1. (CALL)
+0018   201A           00034 CALL IZQUIERDA1
+Warning[203]: Found opcode in column 1. (RETURN)
+0019   0008           00035 RETURN
+                      00036 
+001A                  00037 IZQUIERDA1
+Warning[203]: Found opcode in column 1. (BTFSC)
+001A   1B86           00038 BTFSC PORTB, 7
+Warning[203]: Found opcode in column 1. (RETURN)
+001B   0008           00039 RETURN
+Warning[203]: Found opcode in column 1. (BTFSS)
+001C   1C06           00040 BTFSS PORTB, 0
+Warning[203]: Found opcode in column 1. (RETURN)
+001D   0008           00041 RETURN
+Warning[203]: Found opcode in column 1. (BTFSS)
+001E   1C86           00042 BTFSS PORTB, 1
+Warning[203]: Found opcode in column 1. (RETURN)
+001F   0008           00043 RETURN
+Warning[203]: Found opcode in column 1. (BTFSS)
+0020   1D06           00044 BTFSS PORTB, 2
+Warning[203]: Found opcode in column 1. (RETURN)
+0021   0008           00045 RETURN
+Warning[203]: Found opcode in column 1. (BTFSS)
+0022   1D86           00046 BTFSS PORTB, 3
+Warning[203]: Found opcode in column 1. (RETURN)
+0023   0008           00047 RETURN
+Warning[203]: Found opcode in column 1. (MOVLW)
+0024   301E           00048 MOVLW B'00011110'
+Warning[203]: Found opcode in column 1. (MOVWF)
+0025   0086           00049 MOVWF PORTB
+Warning[203]: Found opcode in column 1. (RETURN)
+0026   0008           00050 RETURN
+0027                  00051 IZQUIERDA2
+Warning[203]: Found opcode in column 1. (BTFSS)
+MPASM  5.51                      SUCESION.ASM   9-22-2024  20:41:48         PAGE  3
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+0027   1C86           00052 BTFSS PORTB, 1
+Warning[203]: Found opcode in column 1. (RETURN)
+0028   0008           00053 RETURN
+Warning[203]: Found opcode in column 1. (BTFSS)
+0029   1D06           00054 BTFSS PORTB, 2
+Warning[203]: Found opcode in column 1. (RETURN)
+002A   0008           00055 RETURN
+Warning[203]: Found opcode in column 1. (BTFSS)
+002B   1D86           00056 BTFSS PORTB, 3
+Warning[203]: Found opcode in column 1. (RETURN)
+002C   0008           00057 RETURN
+Warning[203]: Found opcode in column 1. (BTFSS)
+002D   1E06           00058 BTFSS PORTB, 4
+Warning[203]: Found opcode in column 1. (RETURN)
+002E   0008           00059 RETURN
+Warning[203]: Found opcode in column 1. (MOVLW)
+002F   303C           00060 MOVLW B'00111100'
+Warning[203]: Found opcode in column 1. (MOVWF)
+0030   0086           00061 MOVWF PORTB
+Warning[203]: Found opcode in column 1. (RETURN)
+0031   0008           00062 RETURN
+0032                  00063 IZQUIERDA3
+Warning[203]: Found opcode in column 1. (BTFSS)
+0032   1D06           00064 BTFSS PORTB, 2
+Warning[203]: Found opcode in column 1. (RETURN)
+0033   0008           00065 RETURN
+Warning[203]: Found opcode in column 1. (BTFSS)
+0034   1D86           00066 BTFSS PORTB, 3
+Warning[203]: Found opcode in column 1. (RETURN)
+0035   0008           00067 RETURN
+Warning[203]: Found opcode in column 1. (BTFSS)
+0036   1E06           00068 BTFSS PORTB, 4
+Warning[203]: Found opcode in column 1. (RETURN)
+0037   0008           00069 RETURN
+Warning[203]: Found opcode in column 1. (BTFSS)
+0038   1E86           00070 BTFSS PORTB, 5
+Warning[203]: Found opcode in column 1. (RETURN)
+0039   0008           00071 RETURN
+Warning[203]: Found opcode in column 1. (MOVLW)
+003A   3078           00072 MOVLW B'01111000'
+Warning[203]: Found opcode in column 1. (MOVWF)
+003B   0086           00073 MOVWF PORTB
+Warning[203]: Found opcode in column 1. (RETURN)
+003C   0008           00074 RETURN
+003D                  00075 IZQUIERDA4
+Warning[203]: Found opcode in column 1. (BTFSS)
+003D   1D86           00076 BTFSS PORTB, 3
+Warning[203]: Found opcode in column 1. (RETURN)
+003E   0008           00077 RETURN
+Warning[203]: Found opcode in column 1. (BTFSS)
+003F   1E06           00078 BTFSS PORTB, 4
+Warning[203]: Found opcode in column 1. (RETURN)
+0040   0008           00079 RETURN
+MPASM  5.51                      SUCESION.ASM   9-22-2024  20:41:48         PAGE  4
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+Warning[203]: Found opcode in column 1. (BTFSS)
+0041   1E86           00080 BTFSS PORTB, 5
+Warning[203]: Found opcode in column 1. (RETURN)
+0042   0008           00081 RETURN
+Warning[203]: Found opcode in column 1. (BTFSS)
+0043   1F06           00082 BTFSS PORTB, 6
+Warning[203]: Found opcode in column 1. (RETURN)
+0044   0008           00083 RETURN
+Warning[203]: Found opcode in column 1. (MOVLW)
+0045   30F0           00084 MOVLW B'11110000'
+Warning[203]: Found opcode in column 1. (MOVWF)
+0046   0086           00085 MOVWF PORTB
+Warning[203]: Found opcode in column 1. (RETURN)
+0047   0008           00086 RETURN
+0048                  00087 IZQUIERDA5
+Warning[203]: Found opcode in column 1. (BTFSS)
+0048   1E06           00088 BTFSS PORTB, 4
+Warning[203]: Found opcode in column 1. (RETURN)
+0049   0008           00089 RETURN
+Warning[203]: Found opcode in column 1. (BTFSS)
+004A   1E86           00090 BTFSS PORTB, 5
+Warning[203]: Found opcode in column 1. (RETURN)
+004B   0008           00091 RETURN
+Warning[203]: Found opcode in column 1. (BTFSS)
+004C   1F06           00092 BTFSS PORTB, 6
+Warning[203]: Found opcode in column 1. (RETURN)
+004D   0008           00093 RETURN
+Warning[203]: Found opcode in column 1. (BTFSS)
+004E   1F86           00094 BTFSS PORTB, 7
+Warning[203]: Found opcode in column 1. (RETURN)
+004F   0008           00095 RETURN
+Warning[203]: Found opcode in column 1. (BTFSC)
+0050   1806           00096 BTFSC PORTB, 0
+Warning[203]: Found opcode in column 1. (RETURN)
+0051   0008           00097 RETURN
+Warning[203]: Found opcode in column 1. (MOVLW)
+0052   30E0           00098 MOVLW B'11100000'
+Warning[203]: Found opcode in column 1. (MOVWF)
+0053   0086           00099 MOVWF PORTB
+Warning[203]: Found opcode in column 1. (RETURN)
+0054   0008           00100 RETURN
+0055                  00101 IZQUIERDA6
+Warning[203]: Found opcode in column 1. (BTFSS)
+0055   1E86           00102 BTFSS PORTB, 5
+Warning[203]: Found opcode in column 1. (RETURN)
+0056   0008           00103 RETURN
+Warning[203]: Found opcode in column 1. (BTFSS)
+0057   1F06           00104 BTFSS PORTB, 6
+Warning[203]: Found opcode in column 1. (RETURN)
+0058   0008           00105 RETURN
+Warning[203]: Found opcode in column 1. (BTFSS)
+0059   1F86           00106 BTFSS PORTB, 7
+Warning[203]: Found opcode in column 1. (RETURN)
+MPASM  5.51                      SUCESION.ASM   9-22-2024  20:41:48         PAGE  5
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+005A   0008           00107 RETURN
+Warning[203]: Found opcode in column 1. (BTFSC)
+005B   1A06           00108 BTFSC PORTB, 4
+Warning[203]: Found opcode in column 1. (RETURN)
+005C   0008           00109 RETURN
+Warning[203]: Found opcode in column 1. (MOVLW)
+005D   30C1           00110 MOVLW B'11000001'
+Warning[203]: Found opcode in column 1. (MOVWF)
+005E   0086           00111 MOVWF PORTB
+Warning[203]: Found opcode in column 1. (RETURN)
+005F   0008           00112 RETURN
+0060                  00113 IZQUIERDA7
+Warning[203]: Found opcode in column 1. (BTFSC)
+0060   1A86           00114 BTFSC PORTB, 5
+Warning[203]: Found opcode in column 1. (RETURN)
+0061   0008           00115 RETURN
+Warning[203]: Found opcode in column 1. (BTFSS)
+0062   1F06           00116 BTFSS PORTB, 6
+Warning[203]: Found opcode in column 1. (RETURN)
+0063   0008           00117 RETURN
+Warning[203]: Found opcode in column 1. (BTFSS)
+0064   1F86           00118 BTFSS PORTB, 7
+Warning[203]: Found opcode in column 1. (RETURN)
+0065   0008           00119 RETURN
+Warning[203]: Found opcode in column 1. (BTFSS)
+0066   1C06           00120 BTFSS PORTB, 0
+Warning[203]: Found opcode in column 1. (RETURN)
+0067   0008           00121 RETURN
+Warning[203]: Found opcode in column 1. (BTFSC)
+0068   1886           00122 BTFSC PORTB, 1
+Warning[203]: Found opcode in column 1. (RETURN)
+0069   0008           00123 RETURN
+Warning[203]: Found opcode in column 1. (MOVLW)
+006A   3083           00124 MOVLW B'10000011'
+Warning[203]: Found opcode in column 1. (MOVWF)
+006B   0086           00125 MOVWF PORTB
+Warning[203]: Found opcode in column 1. (RETURN)
+006C   0008           00126 RETURN
+006D                  00127 IZQUIERDA8
+Warning[203]: Found opcode in column 1. (BTFSS)
+006D   1F86           00128 BTFSS PORTB, 7
+Warning[203]: Found opcode in column 1. (RETURN)
+006E   0008           00129 RETURN
+Warning[203]: Found opcode in column 1. (BTFSS)
+006F   1C06           00130 BTFSS PORTB, 0
+Warning[203]: Found opcode in column 1. (RETURN)
+0070   0008           00131 RETURN
+Warning[203]: Found opcode in column 1. (BTFSS)
+0071   1C86           00132 BTFSS PORTB, 1
+Warning[203]: Found opcode in column 1. (RETURN)
+0072   0008           00133 RETURN
+Warning[203]: Found opcode in column 1. (BTFSC)
+0073   1906           00134 BTFSC PORTB, 2
+MPASM  5.51                      SUCESION.ASM   9-22-2024  20:41:48         PAGE  6
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+Warning[203]: Found opcode in column 1. (RETURN)
+0074   0008           00135 RETURN
+Warning[203]: Found opcode in column 1. (BTFSC)
+0075   1986           00136 BTFSC PORTB, 3
+Warning[203]: Found opcode in column 1. (RETURN)
+0076   0008           00137 RETURN
+Warning[203]: Found opcode in column 1. (MOVLW)
+0077   3007           00138 MOVLW B'00000111'
+Warning[203]: Found opcode in column 1. (MOVWF)
+0078   0086           00139 MOVWF PORTB
+Warning[203]: Found opcode in column 1. (RETURN)
+0079   0008           00140 RETURN
+007A                  00141 IZQUIERDA9
+Warning[203]: Found opcode in column 1. (BTFSC)
+007A   1B86           00142 BTFSC PORTB, 7
+Warning[203]: Found opcode in column 1. (RETURN)
+007B   0008           00143 RETURN
+Warning[203]: Found opcode in column 1. (BTFSS)
+007C   1C06           00144 BTFSS PORTB, 0
+Warning[203]: Found opcode in column 1. (RETURN)
+007D   0008           00145 RETURN
+Warning[203]: Found opcode in column 1. (BTFSS)
+007E   1C86           00146 BTFSS PORTB, 1
+Warning[203]: Found opcode in column 1. (RETURN)
+007F   0008           00147 RETURN
+Warning[203]: Found opcode in column 1. (BTFSS)
+0080   1D06           00148 BTFSS PORTB, 2
+Warning[203]: Found opcode in column 1. (RETURN)
+0081   0008           00149 RETURN
+Warning[203]: Found opcode in column 1. (BTFSC)
+0082   1986           00150 BTFSC PORTB, 3
+Warning[203]: Found opcode in column 1. (RETURN)
+0083   0008           00151 RETURN
+Warning[203]: Found opcode in column 1. (MOVLW)
+0084   300F           00152 MOVLW B'00001111'
+Warning[203]: Found opcode in column 1. (MOVWF)
+0085   0086           00153 MOVWF PORTB
+Warning[203]: Found opcode in column 1. (RETURN)
+0086   0008           00154 RETURN
+                      00155 
+                      00156 
+Warning[205]: Found directive in column 1. (END)
+                      00157 END
+MPASM  5.51                      SUCESION.ASM   9-22-2024  20:41:48         PAGE  7
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+ACTIVARLF                         0000000D
+C                                 00000000
+DC                                00000001
+EEADR                             00000009
+EECON1                            00000088
+EECON2                            00000089
+EEDATA                            00000008
+EEIE                              00000006
+EEIF                              00000004
+F                                 00000001
+FSR                               00000004
+GIE                               00000007
+INDF                              00000000
+INTCON                            0000000B
+INTE                              00000004
+INTEDG                            00000006
+INTF                              00000001
+IRP                               00000007
+IZQUIERDA1                        0000001A
+IZQUIERDA2                        00000027
+IZQUIERDA3                        00000032
+IZQUIERDA4                        0000003D
+IZQUIERDA5                        00000048
+IZQUIERDA6                        00000055
+IZQUIERDA7                        00000060
+IZQUIERDA8                        0000006D
+IZQUIERDA9                        0000007A
+NOT_PD                            00000003
+NOT_RBPU                          00000007
+NOT_TO                            00000004
+OPTION_REG                        00000081
+PCL                               00000002
+PCLATH                            0000000A
+PORTA                             00000005
+PORTB                             00000006
+PROBAR                            0000000A
+PS0                               00000000
+PS1                               00000001
+PS2                               00000002
+PSA                               00000003
+RA0                               00000000
+RA1                               00000001
+RA2                               00000002
+RA3                               00000003
+RA4                               00000004
+RB0                               00000000
+RB1                               00000001
+RB2                               00000002
+RB3                               00000003
+RB4                               00000004
+RB5                               00000005
+RB6                               00000006
+RB7                               00000007
+MPASM  5.51                      SUCESION.ASM   9-22-2024  20:41:48         PAGE  8
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+RBIE                              00000003
+RBIF                              00000000
+RD                                00000000
+REGRESAR                          0000000C
+RP0                               00000005
+RP1                               00000006
+STATUS                            00000003
+T0CS                              00000005
+T0IE                              00000005
+T0IF                              00000002
+T0SE                              00000004
+TMR0                              00000001
+TMR0IE                            00000005
+TMR0IF                            00000002
+TRISA                             00000085
+TRISA0                            00000000
+TRISA1                            00000001
+TRISA2                            00000002
+TRISA3                            00000003
+TRISA4                            00000004
+TRISB                             00000086
+TRISB0                            00000000
+TRISB1                            00000001
+TRISB2                            00000002
+TRISB3                            00000003
+TRISB4                            00000004
+TRISB5                            00000005
+TRISB6                            00000006
+TRISB7                            00000007
+W                                 00000000
+WR                                00000001
+WREN                              00000002
+WRERR                             00000003
+Z                                 00000002
+_CONFIG                           00002007
+_CP_OFF                           00003FFF
+_CP_ON                            0000000F
+_DEVID1                           00002006
+_FOSC_EXTRC                       00003FFF
+_FOSC_HS                          00003FFE
+_FOSC_LP                          00003FFC
+_FOSC_XT                          00003FFD
+_HS_OSC                           00003FFE
+_IDLOC0                           00002000
+_IDLOC1                           00002001
+_IDLOC2                           00002002
+_IDLOC3                           00002003
+_LP_OSC                           00003FFC
+_PWRTE_OFF                        00003FFF
+_PWRTE_ON                         00003FF7
+_RC_OSC                           00003FFF
+_WDTE_OFF                         00003FFB
+_WDTE_ON                          00003FFF
+MPASM  5.51                      SUCESION.ASM   9-22-2024  20:41:48         PAGE  9
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+_WDT_OFF                          00003FFB
+_WDT_ON                           00003FFF
+_XT_OSC                           00003FFD
+__16F84A                          00000001
+
+
+MEMORY USAGE MAP ('X' = Used,  '-' = Unused)
+
+0000 : XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX
+0040 : XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX
+0080 : XXXXXXX--------- ---------------- ---------------- ----------------
+
+All other memory blocks unused.
+
+Program Memory Words Used:   135
+Program Memory Words Free:   889
+
+
+Errors   :     0
+Warnings :   139 reported,     0 suppressed
+Messages :     3 reported,     0 suppressed
+
+
